@@ -6,7 +6,7 @@ The project combines a Framer-designed landing page with a React + TypeScript co
 
 ## 🔗 Project Links
 
-* **Live Website:** 
+* **Live Website:**  https://web-veda.netlify.app/
 * **Live Framer Website:** https://soulful-attributes-275108.framer.app/
 * **GitHub Repository:** https://github.com/satishnikale/skillpath-web-veda
 * **AI Conversation:** https://chatgpt.com/c/6a81736f-c0b8-83e8-898c-a05e95e7ae4c, https://chatgpt.com/c/6a81512e-db04-83e8-a9a3-7d648ab5d7c8
@@ -352,7 +352,8 @@ The goal was to keep the final implementation simple enough that I can explain a
 
 The complete relevant AI conversation is available here:
 
-https://chatgpt.com/c/6a81736f-c0b8-83e8-898c-a05e95e7ae4c
+https://chatgpt.com/c/6a81736f-c0b8-83e8-898c-a05e95e7ae4c, https://chatgpt.com/c/6a81512e-db04-83e8-a9a3-7d648ab5d7c8
+
 
 ---
 
@@ -378,7 +379,7 @@ The implementation intentionally prioritizes simplicity and reliability over add
 
 Live Project:
 
-
+https://web-veda.netlify.app/
 
 GitHub:
 
