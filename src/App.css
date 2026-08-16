@@ -1,0 +1,283 @@
+:root {
+    color: #172033;
+    background-color: #fafaf7;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --skillpath-page-max-width: 1280px;
+    --skillpath-border: #e7e9e7;
+    --skillpath-surface: #ffffff;
+    --skillpath-muted: #5f6873;
+    --skillpath-text: #172033;
+    --skillpath-subtle: #fafaf7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    background: var(--skillpath-subtle);
+    color: var(--skillpath-text);
+    font-family: "Manrope", sans-serif;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+a {
+    font: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+.skillpath-page {
+    width: min(100%, var(--skillpath-page-max-width));
+    margin: 0 auto;
+    padding: 0 24px 72px;
+}
+
+@media (min-width: 768px) {
+    .skillpath-page {
+        padding: 0 36px 88px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .skillpath-page {
+        padding: 0 44px 96px;
+    }
+}
+
+.skillpath-header {
+    border-bottom: 1px solid var(--skillpath-border);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.skillpath-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 72px;
+    gap: 16px;
+}
+
+.skillpath-brand,
+.skillpath-footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--skillpath-text);
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+}
+
+.skillpath-brand-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 7px;
+    background: #335aad;
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
+.skillpath-header-nav,
+.skillpath-footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: var(--skillpath-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.skillpath-header-nav a,
+.skillpath-footer-nav a {
+    transition: opacity 150ms ease;
+}
+
+.skillpath-header-nav a:hover,
+.skillpath-footer-nav a:hover {
+    opacity: 0.8;
+}
+
+.skillpath-hero {
+    padding: clamp(52px, 7vw, 98px) 0 clamp(24px, 4vw, 52px);
+}
+
+.skillpath-hero-title {
+    max-width: 700px;
+    margin: 0;
+    color: var(--skillpath-text);
+    font-size: clamp(2.5rem, 4.5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 0.98;
+    letter-spacing: -0.07em;
+}
+
+.skillpath-hero-description {
+    max-width: 700px;
+    margin: 22px 0 28px;
+    color: var(--skillpath-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.skillpath-hero-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+    padding: 0 20px;
+
+    border: 1px solid #315bea;
+    border-radius: 10px;
+
+    background: #315bea;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+
+    text-decoration: none;
+
+    transition:
+        background-color 150ms ease,
+        transform 150ms ease;
+}
+
+.skillpath-hero-link:hover {
+    background: #2448c7;
+    border-color: #2448c7;
+    transform: translateY(-1px);
+}
+
+.skillpath-hero-link:active {
+    transform: translateY(0);
+}
+
+.skillpath-hero-link:hover {
+    opacity: 0.96;
+    transform: translateY(-1px);
+}
+
+.skillpath-current-path {
+    padding: 0 0 32px;
+}
+
+.skillpath-current-path-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: min(100%, 740px);
+    padding: 26px 28px 24px;
+    border: 1px solid var(--skillpath-border);
+    border-radius: 18px;
+    background: var(--skillpath-surface);
+}
+
+.skillpath-current-path-header h2 {
+    margin: 0;
+    color: var(--skillpath-text);
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 1.2;
+}
+
+.skillpath-current-path-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 16px;
+    color: var(--skillpath-muted);
+    font-size: 0.96rem;
+    font-weight: 500;
+}
+
+.skillpath-current-path-progress {
+    color: var(--skillpath-text);
+    font-weight: 700;
+}
+
+.skillpath-footer {
+    padding-top: 48px;
+    border-top: 1px solid var(--skillpath-border);
+    margin-top: 52px;
+}
+
+.skillpath-footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px 24px;
+}
+
+.skillpath-footer-copy {
+    max-width: 420px;
+    margin: 0;
+    color: var(--skillpath-muted);
+    font-size: 0.96rem;
+    line-height: 1.6;
+}
+
+.skillpath-footer-nav {
+    gap: 20px;
+}
+
+.skillpath-footer-legal {
+    margin: 18px 0 0;
+    color: var(--skillpath-muted);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 560px) {
+    .skillpath-header-inner,
+    .skillpath-footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .skillpath-header-nav,
+    .skillpath-footer-nav {
+        gap: 12px;
+    }
+
+    .skillpath-hero-title {
+        letter-spacing: -0.06em;
+    }
+}
+
