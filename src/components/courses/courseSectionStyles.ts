@@ -6,42 +6,51 @@ export const courseSectionStyles = `
 .skillpath-course-section {
     box-sizing: border-box;
     width: 100%;
-    padding: clamp(48px, 7vw, 96px) clamp(20px, 5vw, 72px);
-    color: #132c31;
+    padding: clamp(56px, 8vw, 112px) 0 0;
+    color: #111827;
     font-family: Inter, "Helvetica Neue", Arial, sans-serif;
     container-type: inline-size;
 }
 
-.skillpath-course-eyebrow {
-    margin: 0 0 10px;
-    color: #637577;
+.skillpath-course-header {
+    margin-bottom: 24px;
+}
+
+.skillpath-course-eyebrow,
+.skillpath-section-eyebrow {
+    margin: 0 0 12px;
+    color: #5e676d;
     font-size: 12px;
-    font-weight: 750;
-    letter-spacing: .1em;
+    font-weight: 800;
+    letter-spacing: 0.11em;
     text-transform: uppercase;
 }
 
 .skillpath-course-heading {
-    max-width: 650px;
+    max-width: 720px;
     margin: 0;
-    font-size: clamp(34px, 4vw, 52px);
-    font-weight: 750;
-    letter-spacing: -.045em;
+    color: #111827;
+    font-size: clamp(2.1rem, 4vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.06em;
     line-height: 1.05;
 }
 
 .skillpath-course-intro {
-    max-width: 540px;
-    margin: 16px 0 36px;
-    color: #5c6d70;
-    font-size: 16px;
-    line-height: 1.55;
+    max-width: 620px;
+    margin: 18px 0 0;
+    color: #5f6970;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 .skillpath-course-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    gap: var(--skillpath-course-gap, 20px);
+    column-gap: var(--skillpath-course-gap, 20px);
+    row-gap: var(--skillpath-course-gap, 20px);
+    width: 100%;
+    min-width: 0;
 }
 
 .skillpath-course-card,
@@ -49,86 +58,88 @@ export const courseSectionStyles = `
 .skillpath-course-state,
 .skillpath-course-error {
     box-sizing: border-box;
-    border: 1px solid #d9e3df;
-    border-radius: 20px;
-    background: #f8faf8;
+    border: 1px solid #e5e8e7;
+    border-radius: 18px;
+    background: #ffffff;
 }
 
 .skillpath-course-card {
     display: flex;
     min-width: 0;
-    min-height: 270px;
+    min-height: 260px;
     flex-direction: column;
-    padding: 26px;
-    box-shadow: 0 3px 0 rgba(19, 44, 49, .03);
-    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    padding: 28px 24px 24px;
+    transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
 }
 
 .skillpath-course-card:hover {
-    transform: translateY(-3px);
-    border-color: #c8d7d1;
-    box-shadow: 0 12px 24px rgba(19, 44, 49, .07);
+    border-color: #d9dfde;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(10, 21, 27, 0.04);
 }
 
 .skillpath-course-category {
     margin: 0 0 18px;
-    color: #25816f;
-    font-size: 12px;
+    color: #5f6970;
+    font-size: 11px;
     font-weight: 800;
-    letter-spacing: .08em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
 .skillpath-course-name {
+    min-width: 0;
     margin: 0 0 12px;
-    color: #132c31;
-    font-size: 24px;
-    letter-spacing: -.03em;
-    line-height: 1.15;
+    color: #111827;
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.04em;
+    overflow-wrap: anywhere;
 }
 
 .skillpath-course-description {
+    min-width: 0;
     display: -webkit-box;
     overflow: hidden;
     margin: 0;
-    color: #627276;
-    font-size: 14px;
-    line-height: 1.55;
+    color: #606d72;
+    font-size: 0.96rem;
+    line-height: 1.58;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
+    overflow-wrap: anywhere;
 }
 
 .skillpath-course-card-footer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 12px;
+    gap: 16px;
     margin-top: auto;
-    padding-top: 22px;
-    border-top: 1px solid #e0e8e4;
+    padding-top: 28px;
+    border-top: 1px solid #ecefef;
 }
 
 .skillpath-course-price {
-    color: #132c31;
-    font-size: 20px;
+    min-width: 0;
+    color: #111827;
+    font-size: clamp(1.15rem, 2vw, 1.55rem);
     font-weight: 800;
-    letter-spacing: -.025em;
+    letter-spacing: -0.04em;
+    overflow-wrap: anywhere;
 }
 
 .skillpath-course-refund {
     flex-shrink: 0;
-    padding: 6px 9px;
-    border-radius: 999px;
-    background: #e1f1e9;
-    color: #23725e;
-    font-size: 11px;
-    font-weight: 800;
+    color: #5e676d;
+    font-size: 12px;
+    font-weight: 600;
 }
 
 .skillpath-course-skeleton {
-    min-height: 270px;
-    border: 0;
-    background: linear-gradient(110deg, #edf2ef 25%, #f8fbf9 40%, #edf2ef 55%);
+    min-height: 260px;
+    border: 1px solid #e5e8e7;
+    background: linear-gradient(110deg, #f3f4f5 25%, #fbfbfb 40%, #f3f4f5 55%);
     background-size: 200% 100%;
     animation: skillpath-course-shimmer 1.4s ease-in-out infinite;
 }
@@ -136,10 +147,10 @@ export const courseSectionStyles = `
 .skillpath-course-state,
 .skillpath-course-error {
     margin: 0;
-    padding: 26px;
-    color: #526569;
-    font-size: 16px;
-    line-height: 1.5;
+    padding: 24px;
+    color: #4a5860;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 .skillpath-course-error {
@@ -148,43 +159,58 @@ export const courseSectionStyles = `
     align-items: center;
     justify-content: space-between;
     gap: 18px;
-    border-color: #efd3cb;
-    background: #fff8f5;
-    color: #793d30;
+    border-color: #e9d7d4;
+    background: #fff9f8;
+    color: #6a3d38;
 }
 
 .skillpath-course-error h3,
-.skillpath-course-error p { margin: 0; }
-.skillpath-course-error p { margin-top: 4px; }
+.skillpath-course-error p {
+    margin: 0;
+}
+
+.skillpath-course-error p {
+    margin-top: 4px;
+}
 
 .skillpath-course-retry {
     border: 0;
     border-radius: 999px;
     padding: 10px 16px;
-    background: #132c31;
-    color: #fff;
+    background: #101828;
+    color: #ffffff;
     cursor: pointer;
     font: inherit;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: 700;
 }
 
 .skillpath-course-retry:focus-visible {
-    outline: 3px solid #83b8aa;
+    outline: 3px solid #9bc5d7;
     outline-offset: 3px;
 }
 
-.skillpath-course-country-error { margin-top: 18px; }
+.skillpath-course-country-error {
+    margin-top: 18px;
+}
 
 @container (min-width: 620px) {
-    .skillpath-course-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .skillpath-course-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @container (min-width: 980px) {
-    .skillpath-course-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .skillpath-course-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .skillpath-course-card, .skillpath-course-skeleton { transition: none; animation: none; }
+    .skillpath-course-card,
+    .skillpath-course-skeleton {
+        transition: none;
+        animation: none;
+    }
 }
-`
+`;

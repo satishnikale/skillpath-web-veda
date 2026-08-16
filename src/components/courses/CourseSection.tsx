@@ -53,40 +53,26 @@ export default function CourseSection({ sectionTitle, cardGap }: CourseSectionPr
 
     useEffect(() => {
         const controller = new AbortController()
-        void fetchCourses(controller.signal)
-            .then((nextCourses) => {
-                if (!controller.signal.aborted) setCourses(nextCourses)
-            })
-            .catch(() => {
-                if (!controller.signal.aborted) setCoursesError(true)
-            })
-            .finally(() => {
-                if (!controller.signal.aborted) setCoursesLoading(false)
-            })
+
+        void loadCourses(controller.signal)
+
         return () => controller.abort()
-    }, [])
+    }, [loadCourses])
 
     useEffect(() => {
         const controller = new AbortController()
-        void fetchCountry(controller.signal)
-            .then((nextCountryCode) => {
-                if (!controller.signal.aborted) setCountryCode(nextCountryCode)
-            })
-            .catch(() => {
-                if (!controller.signal.aborted) setCountryError(true)
-            })
-            .finally(() => {
-                if (!controller.signal.aborted) setCountryLoading(false)
-            })
+
+        void loadCountry(controller.signal)
+
         return () => controller.abort()
-    }, [])
+    }, [loadCountry])
 
     const sectionStyle = {
         "--skillpath-course-gap": `${Math.max(0, cardGap)}px`,
     } as CSSProperties
 
     return (
-        <section className="skillpath-course-section" style={sectionStyle} aria-label={sectionTitle}>
+        <section id="courses" className="skillpath-course-section" style={sectionStyle} aria-label={sectionTitle}>
             <style>{courseSectionStyles}</style>
             <header>
                 <p className="skillpath-course-eyebrow">Skillpath</p>

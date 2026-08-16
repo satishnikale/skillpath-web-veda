@@ -13,11 +13,10 @@ export default function CourseCard({ course, price }: CourseCardProps) {
             <p className="skillpath-course-description">
                 {course.description || "Course details will be available soon."}
             </p>
+
             <div className="skillpath-course-card-footer">
                 <span className="skillpath-course-price">{price}</span>
-                {course.refundable === true && (
-                    <span className="skillpath-course-refund">✓ Refundable</span>
-                )}
+                {course.refundable === true && <span className="skillpath-course-refund">Refundable</span>}
             </div>
         </article>
     )
