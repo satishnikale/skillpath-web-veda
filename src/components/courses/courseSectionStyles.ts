@@ -10,7 +10,6 @@ export const courseSectionStyles = `
     width: 100%;
     padding: clamp(18px, 4vw, 48px) 0 0;
     color: #172033;
-    font-family: Inter, "Helvetica Neue", Arial, sans-serif;
     container-type: inline-size;
 }
 
@@ -21,7 +20,7 @@ export const courseSectionStyles = `
 .skillpath-course-eyebrow,
 .skillpath-section-eyebrow {
     margin: 0 0 12px;
-    color: #5d6671;
+    color: #315bea;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -29,21 +28,24 @@ export const courseSectionStyles = `
 }
 
 .skillpath-course-heading {
-    max-width: 760px;
+    max-width: 720px;
     margin: 0;
     color: #172033;
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(32px, 4.5vw, 52px);
     font-weight: 700;
-    letter-spacing: -0.06em;
-    line-height: 1.02;
+    line-height: 1.05;
+    letter-spacing: -0.045em;
 }
 
 .skillpath-course-intro {
-    max-width: 760px;
-    margin: 18px 0 32px;
-    color: #5f6873;
-    font-size: 1.04rem;
+    max-width: 600px;
+    margin: 16px 0 36px;
+    color: #667085;
+    font-size: 15px;
+    font-weight: 400;
     line-height: 1.6;
+    letter-spacing: -0.005em;
 }
 
 .skillpath-course-grid {
@@ -79,23 +81,29 @@ export const courseSectionStyles = `
 }
 
 .skillpath-course-category {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
     margin: 0 0 16px;
-    color: #5d6671;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    padding: 7px 12px;
+    border-radius: 8px;
+
+    background: #eef4ff;
+    color: #315bea;
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0;
+    text-transform: none;
 }
 
 .skillpath-course-name {
-    min-width: 0;
-    margin: 0 0 12px;
-    color: #172033;
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 1.28;
-    letter-spacing: -0.04em;
-    overflow-wrap: anywhere;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
 }
 
 .skillpath-course-description {
@@ -121,19 +129,27 @@ export const courseSectionStyles = `
 }
 
 .skillpath-course-price {
-    min-width: 0;
-    color: #172033;
-    font-size: 1.15rem;
+    font-family: "Manrope", sans-serif;
+    font-size: 17px;
     font-weight: 700;
-    letter-spacing: -0.03em;
-    overflow-wrap: anywhere;
+    line-height: 1.2;
 }
 
 .skillpath-course-refund {
+    display: inline-flex;
+    align-items: center;
     flex-shrink: 0;
-    color: #61707c;
+
+    padding: 6px 10px;
+    border-radius: 8px;
+
+    background: #f1f5f9;
+    color: #64748b;
+
     font-size: 12px;
     font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0;
 }
 
 .skillpath-course-skeleton {

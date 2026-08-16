@@ -1,3 +1,5 @@
+import { ArrowRightIcon } from "lucide-react";
+
 export default function Hero() {
     return (
         <section className="skillpath-hero" aria-labelledby="skillpath-hero-title">
@@ -16,6 +18,7 @@ export default function Hero() {
 
             <a href="#courses" className="skillpath-hero-link">
                 Explore Courses
+                <ArrowRightIcon size={18} />
             </a>
         </section>
     )

@@ -1,12 +1,16 @@
 :root {
     color: #172033;
     background-color: #fafaf7;
-    font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
+
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
     --skillpath-page-max-width: 1280px;
     --skillpath-border: #e7e9e7;
     --skillpath-surface: #ffffff;
@@ -28,7 +32,7 @@ body {
     min-width: 320px;
     background: var(--skillpath-subtle);
     color: var(--skillpath-text);
-    font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Manrope", sans-serif;
 }
 
 img,
@@ -100,7 +104,7 @@ a {
     width: 22px;
     height: 22px;
     border-radius: 7px;
-    background: #111827;
+    background: #335aad;
     color: #ffffff;
     font-size: 0.72rem;
     font-weight: 800;
@@ -152,14 +156,35 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
     min-height: 44px;
     padding: 0 20px;
-    border: 1px solid #111827;
-    border-radius: 999px;
-    background: #111827;
+
+    border: 1px solid #315bea;
+    border-radius: 10px;
+
+    background: #315bea;
     color: #ffffff;
+
+    font-size: 14px;
     font-weight: 600;
-    transition: opacity 150ms ease, transform 150ms ease;
+    line-height: 1;
+
+    text-decoration: none;
+
+    transition:
+        background-color 150ms ease,
+        transform 150ms ease;
+}
+
+.skillpath-hero-link:hover {
+    background: #2448c7;
+    border-color: #2448c7;
+    transform: translateY(-1px);
+}
+
+.skillpath-hero-link:active {
+    transform: translateY(0);
 }
 
 .skillpath-hero-link:hover {
