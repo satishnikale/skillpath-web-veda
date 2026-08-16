@@ -7,16 +7,16 @@ export default function Footer() {
                     <span>Skillpath</span>
                 </div>
 
-                <p className="skillpath-footer-copy">
-                    Learn practical skills that help you build, ship, and grow with confidence.
-                </p>
+                <p className="skillpath-footer-copy">Practical learning for ambitious builders.</p>
 
                 <nav className="skillpath-footer-nav" aria-label="Footer navigation">
                     <a href="#courses">Courses</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
                 </nav>
             </div>
 
-            <p className="skillpath-footer-legal">© 2026 Skillpath</p>
+            <p className="skillpath-footer-legal">© 2026 Skillpath. All rights reserved.</p>
         </footer>
     )
 }
